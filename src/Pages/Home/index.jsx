@@ -8,17 +8,17 @@ import { MagnifyingGlassCircleIcon } from "@heroicons/react/24/solid"
 const Home = () => {
     const context = useContext(ShoppingCartContext)
     const renderView = () => {
-        if (context.filteredItems?.length > 0) {
-            return (
-                context.filteredItems?.map(item => (
-                    <Card key={item.id} product={item} />
-                ))
-            )
-        }else {
-            return (
-                <div>We don't have anything :(</div>
-            )
-        }
+            if (context.filteredItems?.length > 0) {
+                return (
+                    context.filteredItems?.map(item => (
+                        <Card key={item.id} product={item} />
+                    ))
+                )
+            } else {
+                return (
+                    <div>We don't have anything :(</div>
+                )
+            }
     }
 
     return (
